@@ -4,13 +4,6 @@ import logo from "../../logo.png";
 export default function Navbar() {
   return (
     <header className="header">
-      <div className="topheader container">
-        <a href="">Hello, Sign in</a>
-        <div className="cart-icon">
-          {cartIcon}
-          <div className="badge">0</div>
-        </div>
-      </div>
       <nav className="navbar container">
         <div className="navbar-left">
           <div className="navbar-logo">
@@ -20,7 +13,7 @@ export default function Navbar() {
             <i className="navbar-icon-bar">{hamburger}</i>
           </button>
         </div>
-        <div className="navbar-middle">
+        {/* <div className="navbar-middle">
           <div className="nav-item">
             <a href="" className="nav-link">
               Men{" "}
@@ -36,14 +29,24 @@ export default function Navbar() {
               Kids
             </a>
           </div>
-        </div>
-        <div className="navbar-right">
+        </div> */}
+        <div className="navbar-middle">
           <form action="">
+            <input className="search-input" type="text" placeholder="Try search for product " />
             <button className="search-btn">
               <img src="https://img.icons8.com/material/24/000000/search.png" />
             </button>
-            <input className="search-input" type="text" placeholder="Try search for product" />
           </form>
+        </div>
+        <div className="navbar-right">
+          <a href="">Hello, Sign in</a>
+          <div className="basket">
+            <div className="cart-icon">
+              {cartIcon}
+              {/* <div className="badge"></div> */}
+            </div>
+            <span>My Cart</span>
+          </div>
         </div>
       </nav>
     </header>
